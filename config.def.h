@@ -19,7 +19,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "󰈹", "", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -60,15 +60,17 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *firefox[]  = { "firefox", NULL };
-static const char *thunarcmd[] = { "thunar", NULL };
+static const char *thunar[] = { "thunar", NULL };
+static const char *telegram[] = { "telegram-desktop", NULL };
+
 
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ ShiftMask,                    XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          {.v = termcmd } },
-	{ ControlMask,                  XK_f,      spawn,          {.v = thunarcmd } },
-        { ShiftMask,                    XK_o,      spawn,          {.v = firefox } },
+	{ MODKEY,                       XK_e,      spawn,          {.v = thunar } },
+        { MODKEY,                       XK_1,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
