@@ -62,15 +62,17 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *thunar[] = { "thunar", NULL };
 static const char *telegram[] = { "telegram-desktop", NULL };
-
-
+static const char *volup[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "5%+", NULL };
+static const char *voldown[] = { "pactl", "set-sink-volume", "@DEFAULT_SINK@", "5%-", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_equal,  spawn,          {.v = volup } },
+	{ MODKEY,                       XK_minus,  spawn,          {.v = voldown } },
 	{ ShiftMask,                    XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = thunar } },
-        { MODKEY,                       XK_1,      spawn,          {.v = firefox } },
+	{ MODKEY,                       XK_1,      spawn,          {.v = firefox } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
