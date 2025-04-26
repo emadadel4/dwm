@@ -29,7 +29,7 @@
 # Set Up Xinitrc
 # ============================================
 
-    echo "\033[1;33m[+] Installing .xinitrc\033[0m"
+    echo "\033[1;33m[+] Set Up .xinitrc\033[0m"
 
     curl -o ~/.xinitrc https://raw.githubusercontent.com/emadadel4/dwm/refs/heads/main/src/scripts/.xinitrc
     chmod +x ~/.xinitrc
