@@ -25,12 +25,6 @@
 # Set Up Xinitrc
 # ============================================
 
-    cat > ~/.xinitrc << EOF
-    #!/bin/sh
-    xrandr --output HDMI-1 --set "Broadcast RGB" "Full" --mode 1920x1080 --rate 60 &
-    exec dwm
-    EOF
-    chmod +x ~/.xinitrc
     
 # ============================================
 # END Set Up Xinitrc
