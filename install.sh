@@ -33,7 +33,6 @@
 # ============================================
 
 sudo ln -sf /etc/sv/dbus /var/service
-sudo ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/pipewire-pulse.desktop
 
 # ============================================
 # END Enable services 
