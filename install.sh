@@ -10,7 +10,7 @@
 	pkg-config libXft-devel libXinerama-devel glib-devel /
 	font-inconsolata-otf git xsetroot gcc make xorg-server /
 	xinit xrandr xorg xauth kitty setxkbmap pipewire wireplumber /
-	libspa-bluetooth sxhkd NetworkManager network-manager-applet -y 
+	libspa-bluetooth sxhkd NetworkManager network-manager-applet dbus -y 
 
 # ============================================
 # Set Up suckless directories
@@ -28,11 +28,27 @@
 # END Set Up suckless directories
 # ============================================
 
+
+# ============================================
+# Installing fonts...
+# ============================================
+
+echo -e "\033[1;33m[+] Installing fonts...\033[0m"
+curl -L -o fonts.tar.gz https://github.com/emadadel4/void-linux/raw/refs/heads/main/env-configs/xfce/emadadel/fonts.tar.gz
+sudo tar -xvf fonts.tar.gz -C /usr/share/fonts/ --strip-components=1
+sudo fc-cache -f -v
+
+# ============================================
+# END Installing fonts...
+# ============================================
+
 # ============================================
 # Enabling services 
 # ============================================
 
-sudo ln -sf /etc/sv/dbus /var/service
+ 	sudo rfkill unblock bluetooth
+	sudo ln -sf /etc/sv/dbus /var/service
+	sudo ln -sf /etc/sv/bluetoothd /var/service/
 
 # ============================================
 # END Enable services 
