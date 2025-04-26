@@ -25,6 +25,8 @@
 # Set Up Xinitrc
 # ============================================
 
+    curl -o https://raw.githubusercontent.com/emadadel4/dwm/refs/heads/main/src/scripts/.xinitrc
+    chmod +x .xinitrc
     
 # ============================================
 # END Set Up Xinitrc
