@@ -6,7 +6,8 @@
 
     echo "\033[1;33m[+] Installing Required Packages...\033[0m"
 	sudo xbps-install -Su -y
-	sudo xbps-install -S vim make patch libX11-devel pkg-config libXft-devel libXinerama-devel glib-devel font-inconsolata-otf git xsetroot gcc make xorg-server xinit xrandr xorg xauth kitty setxkbmap sxhkd -y 
+	sudo xbps-install -S vim make patch libX11-devel pkg-config libXft-devel libXinerama-devel glib-devel font-inconsolata-otf git xsetroot gcc make xorg-server xinit xrandr xorg xauth kitty setxkbmap pipewire wireplumber libspa-bluetooth sxhkd -y 
+ 
 
 # ============================================
 # Set Up suckless directories
@@ -23,6 +24,18 @@
 # ============================================
 # END Set Up suckless directories
 # ============================================
+
+# ============================================
+# Enabling services 
+# ============================================
+
+sudo ln -sf /etc/sv/dbus /var/service
+sudo ln -s /usr/share/applications/pipewire-pulse.desktop /etc/xdg/autostart/pipewire-pulse.desktop
+
+# ============================================
+# END Enable services 
+# ============================================
+
 # ============================================
 # Set Up Xinitrc
 # ============================================
