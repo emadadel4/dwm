@@ -58,11 +58,13 @@ sudo fc-cache -f -v
 # Set Up Xinitrc
 # ============================================
 
-    echo "\033[1;33m[+] Set Up .xinitrc\033[0m"
+	echo "\033[1;33m[+] Set Up .xinitrc\033[0m"
+	
+	curl -o ~/.xinitrc https://raw.githubusercontent.com/emadadel4/dwm/refs/heads/main/src/scripts/.xinitrc
+	chmod +x ~/.xinitrc
+	sudo echo "source /usr/share/bash-completion/bash_completion" >> .bashrc
+	source ~/.bashrc
 
-    curl -o ~/.xinitrc https://raw.githubusercontent.com/emadadel4/dwm/refs/heads/main/src/scripts/.xinitrc
-    chmod +x ~/.xinitrc
-    
 # ============================================
 # END Set Up Xinitrc
 # ============================================
