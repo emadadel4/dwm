@@ -5,9 +5,8 @@
 # ============================================
 
     echo "\033[1;33m[+] Installing Required Packages...\033[0m"
-
-    sudo xbps-install -Su -y
-    sudo xbps-install -S vim make libX11-devel pkg-config libXft-devel libXinerama-devel glib-devel font-inconsolata-otf git xsetroot gcc make xorg-server xinit xrandr xorg xauth kitty -y 
+	sudo xbps-install -Su -y
+	sudo xbps-install -S vim make libX11-devel pkg-config libXft-devel libXinerama-devel glib-devel font-inconsolata-otf git xsetroot gcc make xorg-server xinit xrandr xorg xauth kitty -y 
 
 # ============================================
 # Set Up suckless directories
