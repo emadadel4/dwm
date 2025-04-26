@@ -54,6 +54,53 @@ source ~/.bashrc
 # ============================================
 
 # ============================================
+#  Installing additional packaging...
+# ============================================
+
+read -r -d '' PkgList <<'EOF'
+nano
+xrandr
+bluez
+blueman
+libspa-bluetooth
+vlc
+uget
+redshift
+redshift-gtk
+kitty
+bash-completion
+freerdp
+SDL2_ttf
+unzip
+unrar
+git
+mesa-dri-32bit
+mesa-vulkan-intel 
+mesa-vulkan-intel-32bit 
+vulkan-loader-32bit 
+intel-video-accel
+gnutls-32bit 
+libgcc-32bit 
+libstdc++-32bit 
+libdrm-32bit 
+libglvnd-32bit
+amberol
+fish-shell
+nodejs
+mesa-intel-dri 
+libva-intel-driver 
+telegram-desktop
+xfce4-screenshooter
+EOF
+
+echo -e "\033[1;33m[+] Installing base packages...\033[0m"
+sudo xbps-install -S $PkgList
+
+# ============================================
+# END Installing additional packaging...
+# ============================================
+
+# ============================================
 # Setup GPU drivers settings
 # ============================================
 echo -e "Setup GPU drivers settings"
@@ -62,3 +109,4 @@ echo "options i915 enable_dc=2 enable_fbc=1 fastboot=1 modeset=1" | sudo tee /et
 # END Setup GPU drivers settings
 # ============================================
 echo -e "\n\033[32mInstallation completed!\033[0m"
+
