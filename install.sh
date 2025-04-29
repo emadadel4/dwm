@@ -69,7 +69,6 @@ redshift-gtk
 kitty
 bash-completion
 freerdp
-SDL2_ttf
 unzip
 unrar
 git
