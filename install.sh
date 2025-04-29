@@ -8,7 +8,7 @@ sudo xbps-install -Su -y
 sudo xbps-install -S vim make patch libX11-devel / 
 pkg-config libXft-devel libXinerama-devel glib-devel /
 font-inconsolata-otf git xsetroot gcc xorg-server /
-xinit xrandr xorg xauth kitty setxkbmap pipewire wireplumber /
+xinit xrandr xorg xauth alacritty setxkbmap pipewire wireplumber /
 libspa-bluetooth sxhkd NetworkManager network-manager-applet dbus -y 
 # ============================================
 # Set Up suckless directories
